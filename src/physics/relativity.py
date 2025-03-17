@@ -13,9 +13,8 @@ def lorentz_factor(velocity, use_gpu=False):
     :return: Lorentz factor
     """
     backend = cp if use_gpu else np
-    v_safe = backend.minimum(velocity, c - 1e-10)  # Ensure velocity < c
+    v_safe = backend.minimum(velocity, c * 0.99)  # Limit velocity to 99% of c
     return 1 / backend.sqrt(1 - (v_safe**2 / c**2))
-
 
 def relativistic_energy(mass, velocity, use_gpu=False):
     """
