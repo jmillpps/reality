@@ -10,7 +10,6 @@ def euler_step(position, velocity, acceleration, dt, use_gpu=False):
     new_position = position.astype(backend.float64) + new_velocity * dt
     return new_position, new_velocity
 
-
 def verlet_step(position, velocity, acceleration, prev_acceleration, dt, use_gpu=False):
     """
     Perform a single Verlet integration step with high precision.
@@ -20,7 +19,6 @@ def verlet_step(position, velocity, acceleration, prev_acceleration, dt, use_gpu
     avg_acceleration = 0.5 * (acceleration + prev_acceleration)
     new_velocity = velocity.astype(backend.float64) + avg_acceleration.astype(backend.float64) * dt
     return new_position, new_velocity
-
 
 def rk4_step(position, velocity, acceleration_func, dt, use_gpu=False):
     """
