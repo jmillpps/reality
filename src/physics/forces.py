@@ -46,10 +46,12 @@ def compute_forces_matrix(positions, charges, masses, use_gpu=False):
     num_particles = len(positions)
     forces = np.zeros((num_particles, num_particles, 3))
 
+    softening_factor = 1e-10  # 🚨 Small softening to avoid division by zero at close range
+
     for i in range(num_particles):
         for j in range(i + 1, num_particles):
             r_vec = positions[j] - positions[i]
-            r_mag = np.linalg.norm(r_vec) + 1e-10  # Avoid division by zero
+            r_mag = np.linalg.norm(r_vec) + softening_factor  # 🚨 Ensure r_mag never becomes 0
             r_hat = r_vec / r_mag
 
             # Gravity
