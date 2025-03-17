@@ -34,7 +34,7 @@ class Simulation:
 
     def update_positions(self, forces):
         """Update partice positions based on computed forces."""
-        self.velocities += (forces / self.masses[:, self.backend.newaxis]) * self.dt
+        self.velocities += (forces.sum(axis=1) / self.masses[:, self.backend.newaxis]) * self.dt
         self.positions += self.velocities * self.dt
 
     def compute_energy_metrics(self):
@@ -52,7 +52,11 @@ class Simulation:
         # Compute additional physics effects (quantum, relativity, electroweak, etc.)
         lorentz_factors = lorentz_factor(self.velocities, use_gpu=(self.backend == cp))
         wave_states = compute_wavefunction(self.positions, self.velocities, use_gpu=(self.backend == cp))
-        weak_interactions = weak_charged_currents(self.positions, np.pi / 4, use_gpu=(self.backend == cp))
+        
+        # Fix weak charged current input shape
+        fermion_states = self.positions[:, :2]  # Extract first two spatial dimensions
+        weak_interactions = weak_charged_currents(fermion_states, np.pi / 4, use_gpu=(self.backend == cp))
+        
         einstein_eq = einstein_field_equation(forces, self.positions, use_gpu=(self.backend == cp))
         
         return {
