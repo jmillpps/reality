@@ -35,8 +35,7 @@ def weak_charged_currents(fermion_state, mixing_angle, use_gpu=False):
         [backend.cos(mixing_angle), backend.sin(mixing_angle)],
         [-backend.sin(mixing_angle), backend.cos(mixing_angle)]
     ])
-    
-    return backend.dot(mixing_matrix, fermion_state)
+    return backend.dot(fermion_state, mixing_matrix.T)
 
 def z_boson_mass(use_gpu=False):
     """
