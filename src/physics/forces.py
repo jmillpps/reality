@@ -21,7 +21,6 @@ def compute_force(r, q1, q2, m1, m2, use_gpu=False):
     :return: Total force magnitude
     """
     backend = cp if use_gpu else np
-
     r_safe = backend.maximum(r, 1e-10)  # Prevent division by zero
 
     # Compute gravitational force
@@ -38,34 +37,32 @@ def compute_force(r, q1, q2, m1, m2, use_gpu=False):
 
     # Total force
     F_total = F_grav + F_em + F_weak + F_strong
-
     return F_total
 
 def compute_forces_matrix(positions, charges, masses, use_gpu=False):
     """
-    Compute the pairwise forces between all partices in a system.
-    Supports GPU acceleration for large-scale simulations.
-
-    :param positions: Nx3 array of partice positions
-    :param charges: N-length array of partice charges
-    :param masses: N-length array of partice masses
-    :param use_gpu: If True, performs computation on GPU
-    :return: NxN force matrix
+    Compute gravitational and electromagnetic forces between particles.
     """
-    backend = cp if use_gpu else np
+    num_particles = len(positions)
+    forces = np.zeros((num_particles, num_particles, 3))
 
-    N = positions.shape[0]
-    forces = backend.zeros((N, N, 3))
-
-    for i in range(N):
-        for j in range(i + 1, N):
+    for i in range(num_particles):
+        for j in range(i + 1, num_particles):
             r_vec = positions[j] - positions[i]
-            r = backend.linalg.norm(r_vec)
-            F = compute_force(r, charges[i], charges[j], masses[i], masses[j], use_gpu)
+            r_mag = np.linalg.norm(r_vec) + 1e-10  # Avoid division by zero
+            r_hat = r_vec / r_mag
 
-            # Apply force symmetrically
-            forces[i, j] = (F / (r + 1e-10)) * r_vec
-            forces[j, i] = -forces[i, j]
+            # Gravity
+            G_force = (6.67430e-11 * masses[i] * masses[j]) / (r_mag ** 2)
+            forces[i, j] += G_force * r_hat
+            forces[j, i] -= G_force * r_hat
+
+            # Electromagnetism (Coulomb force)
+            if charges[i] * charges[j] != 0:
+                k_e = 8.987551787e9  # Coulomb's constant
+                E_force = (k_e * charges[i] * charges[j]) / (r_mag ** 2)
+                forces[i, j] += E_force * r_hat
+                forces[j, i] -= E_force * r_hat
 
     return forces
 
