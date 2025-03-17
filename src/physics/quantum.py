@@ -5,23 +5,21 @@ import cupy as cp  # GPU acceleration when available
 hbar = 1.054571817e-34  # Reduced Planck's constant (J·s)
 c = 299792458  # Speed of light (m/s)
 
-
 def compute_wavefunction(position, momentum, use_gpu=False):
     """
     Compute the wavefunction using a plane wave approximation.
-    
-    :param position: Position vector
-    :param momentum: Momentum vector
+
+    :param position: Nx3 position matrix
+    :param momentum: Nx3 momentum matrix
     :param use_gpu: If True, uses GPU acceleration
-    :return: Complex wavefunction value
+    :return: Nx1 Complex wavefunction values
     """
     backend = cp if use_gpu else np
-    x, y, z = position
-    p_x, p_y, p_z = momentum
-    k = backend.array([p_x / hbar, p_y / hbar, p_z / hbar])
-    phase = backend.dot(k, backend.array([x, y, z]))
-    return backend.exp(1j * phase)
 
+    # Compute wavefunction in vectorized form
+    k = momentum / hbar
+    phase = backend.sum(k * position, axis=1)  # Dot product for each row
+    return backend.exp(1j * phase)
 
 def compute_uncertainty_relation(delta_x, delta_p):
     """
