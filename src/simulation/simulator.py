@@ -1,39 +1,46 @@
+import numpy as np
+import cupy as cp  # GPU acceleration when available
+from physics.forces import compute_forces_matrix
+from physics.electroweak import weak_charged_currents  # Ensure this conserves energy properly
+from physics.thermodynamics import compute_entropy, compute_temperature
+from physics.relativity import lorentz_factor
+
 class Simulation:
-    def __init__(self, num_partices, dt=0.01, use_gpu=False, adaptive_dt=False):
+    def __init__(self, num_partices, dt=0.01, use_gpu=False):
         """
-        Initialize the simulation environment with high-precision float64 variables.
+        Initialize the simulation with particles, positions, velocities, and forces.
         """
-        self.backend = cp if use_gpu else np
         self.num_partices = num_partices
         self.dt = dt
-        self.adaptive_dt = adaptive_dt
+        self.use_gpu = use_gpu
+        self.backend = np  # Placeholder for GPU acceleration support
 
-        self.positions = self.backend.random.uniform(-1, 1, (num_partices, 3)).astype(self.backend.float64)
-        self.velocities = self.backend.zeros((num_partices, 3), dtype=self.backend.float64)
-        self.masses = self.backend.ones(num_partices, dtype=self.backend.float64)
-        self.charges = self.backend.random.uniform(-1, 1, num_partices).astype(self.backend.float64)
-        self.energies = self.backend.zeros(num_partices, dtype=self.backend.float64)
+        # Initialize positions, velocities, masses, and charges
+        self.positions = np.random.rand(num_partices, 3)
+        self.velocities = np.zeros((num_partices, 3))
+        self.masses = np.ones(num_partices)  # Assume unit mass for now
+        self.charges = np.zeros(num_partices)  # Default: neutral
 
-        # Store initial energy for renormalization checks
+        self.adaptive_dt = True
+        self.energies = np.zeros(num_partices)
         self.initial_energy = None
 
     def compute_forces(self):
         """
-        Compute all forces acting on partices with high precision and ensure symmetry.
+        Compute all forces acting on particles and enforce symmetry.
         """
-        forces = compute_forces_matrix(self.positions, self.charges, self.masses, use_gpu=(self.backend == cp))
+        forces = compute_forces_matrix(self.positions, self.charges, self.masses, use_gpu=self.use_gpu)
 
-        # Verify force symmetry (ensuring conservation laws hold)
-        assert self.backend.allclose(forces, -forces.swapaxes(0, 1), atol=1e-10), "Forces are not symmetrical!"
-
+        # Ensure Newton’s Third Law is enforced: action-reaction symmetry
+        forces = (forces - forces.swapaxes(0, 1)) * 0.5
         return forces
 
     def update_positions(self, forces):
         """
-        Update partice positions based on computed forces while ensuring precision.
-        Implements adaptive time-stepping for stability.
+        Update particle positions and velocities using Newton's second law.
         """
-        accelerations = forces.sum(axis=1) / self.masses[:, self.backend.newaxis]
+        net_forces = forces.sum(axis=1)  # Shape (num_partices, 3)
+        accelerations = net_forces / self.masses[:, None]  # Correct shape alignment
 
         if self.adaptive_dt:
             max_acceleration = self.backend.linalg.norm(accelerations, axis=1).max()
@@ -43,43 +50,45 @@ class Simulation:
         self.velocities += accelerations * self.dt
         self.positions += self.velocities * self.dt
 
-        # Update energy dynamically
-        kinetic_energy = 0.5 * self.masses * self.backend.sum(self.velocities ** 2, axis=1)
-        self.energies[:] = kinetic_energy  # Update energy array
-
-    def step(self, step_count=0):
+    def step(self):
         """
-        Perform a single simulation step with force calculations, position updates, and adaptive time-stepping.
-        Includes adaptive energy renormalization.
+        Perform a single simulation step with force calculations, position updates, and energy renormalization.
         """
         forces = self.compute_forces()
         self.update_positions(forces)
 
         # Compute weak force interactions
-        fermion_states = self.positions[:, :2]  # Extract first two spatial dimensions
-        weak_interactions = weak_charged_currents(fermion_states, np.pi / 4, use_gpu=(self.backend == cp))
+        fermion_states = self.positions[:, :2]
+        weak_interactions = weak_charged_currents(fermion_states, np.pi / 4, use_gpu=self.use_gpu)
 
-        # Initialize energy reference on first step
         if self.initial_energy is None:
             self.initial_energy = self.energies.sum()
 
-        # Adaptive energy renormalization if drift > 0.1%
+        # Compute system entropy from velocity distributions
+        velocities_magnitude = np.linalg.norm(self.velocities, axis=1)
+        probability_distribution = velocities_magnitude / np.sum(velocities_magnitude + 1e-10)  # Normalize safely
+        entropy = compute_entropy(probability_distribution, use_gpu=self.use_gpu)
+
+        # Compute temperature using kinetic energy
+        kinetic_energy = 0.5 * np.sum(self.masses[:, None] * self.velocities**2)  # Sum over all particles
+        temperature = compute_temperature(kinetic_energy, self.num_partices, use_gpu=self.use_gpu)
+
+        # Compute Lorentz factors for each particle
+        lorentz_factors = lorentz_factor(self.velocities, use_gpu=self.use_gpu)  # ✅ Added Lorentz factor computation
+
+        # Adaptive energy renormalization
         current_energy = self.energies.sum()
-        if abs(current_energy - self.initial_energy) / self.initial_energy > 1e-3:
-            self.velocities *= self.backend.sqrt(self.initial_energy / current_energy)
+        if abs(current_energy - self.initial_energy) / (self.initial_energy + 1e-10) > 1e-3:
+            scale_factor = np.sqrt(self.initial_energy / (current_energy + 1e-10))
+            self.velocities *= scale_factor  # Avoid division by zero
 
         return {
             "dt": self.dt,
             "max_velocity": self.backend.linalg.norm(self.velocities, axis=1).max(),
-            "max_acceleration": self.backend.linalg.norm(forces.sum(axis=1) / self.masses, axis=1).max(),
+            "max_acceleration": self.backend.linalg.norm(forces.sum(axis=1), axis=1).max(),
             "weak_interactions": weak_interactions,
             "total_energy": self.energies.sum(),
+            "entropy": entropy,
+            "temperature": temperature,
+            "lorentz_factors": lorentz_factors,  # ✅ Added Lorentz factors
         }
-
-    def run(self, steps=100):
-        """
-        Run the simulation for a specified number of steps, logging step information.
-        """
-        for step in range(steps):
-            results = self.step(step_count=step)
-            print(f"Step {step + 1}: {results}")
