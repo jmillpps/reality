@@ -32,16 +32,15 @@ def compute_space_time_warping(m, r, use_gpu=False):
     r_safe = backend.maximum(r, 1e-10)
     return 1 - (2 * G * m) / (c**2 * r_safe)
 
-def compute_cosmic_evolution(G, M, r, Lambda, use_gpu=False):
+def gravitational_wave_propagation(frequency, distance, use_gpu=False):
     """
-    Compute cosmic structure evolution.
+    Simulate gravitational wave propagation as a metric perturbation.
 
-    :param G: Gravitational constant
-    :param M: Mass of cosmic object
-    :param r: Distance from the object
-    :param Lambda: Cosmological constant
+    :param frequency: Frequency of the gravitational wave
+    :param distance: Distance of propagation
     :param use_gpu: If True, uses GPU acceleration
-    :return: Acceleration of cosmic evolution
+    :return: Gravitational wave perturbation factor
     """
     backend = cp if use_gpu else np
-    return -G * M / r**2 + Lambda * r
+    phase = 2 * np.pi * frequency * (distance / c)
+    return backend.exp(1j * phase) / distance
