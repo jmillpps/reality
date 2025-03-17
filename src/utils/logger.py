@@ -35,3 +35,8 @@ def log_debug(message):
     """Log a debug message."""
     logging.debug(message)
     print(f"[DEBUG] {message}")
+
+def log_critical(message):
+    """Log a critical error message."""
+    logging.critical(message)
+    print(f"[CRITICAL] {message}")
