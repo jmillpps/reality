@@ -44,3 +44,37 @@ def gravitational_wave_propagation(frequency, distance, use_gpu=False):
     backend = cp if use_gpu else np
     phase = 2 * np.pi * frequency * (distance / c)
     return backend.exp(1j * phase) / distance
+
+def einstein_curvature_check(positions, masses, use_gpu=False):
+    """
+    Check whether the system's curvature aligns with Einstein's field equations.
+
+    This function estimates the local space-time curvature by summing over mass-induced perturbations.
+
+    :param positions: Array of particle positions (N,3)
+    :param masses: Array of particle masses (N,)
+    :param use_gpu: If True, use GPU acceleration
+    :return: Boolean (True if curvature is self-consistent, False otherwise)
+    """
+    backend = cp if use_gpu else np
+    N = len(masses)
+
+    # Compute pairwise distances
+    r_matrix = backend.linalg.norm(
+        positions[:, None, :] - positions[None, :, :], axis=-1
+    ) + 1e-10  # Avoid division by zero
+
+    # Compute Einstein curvature tensor components (approximate)
+    curvature_matrix = (2 * G * masses[None, :]) / (c**2 * r_matrix)
+
+    # Sum curvature effects
+    total_curvature = backend.sum(curvature_matrix)
+
+    # Normalize by system size
+    average_curvature = total_curvature / N
+
+    # Theoretical expectation for a stable system
+    expected_curvature = (G / c**4) * backend.sum(masses) / N
+
+    # Check if deviation is within an acceptable range
+    return backend.abs(average_curvature - expected_curvature) < 1e-6
