@@ -47,31 +47,23 @@ The Unified Force Model seeks to merge all fundamental interactions (gravitation
 
 1. **Gravity (Newtonian Component):**
 
-   $$
-   F_{\text{Gravity}} = \frac{GMm}{d^2}\,.
-   $$
+![Fgravity](https://github.com/user-attachments/assets/25eb106c-dcb9-46a2-94a7-aea7c78d2013)
 
 2. **Electromagnetic Force:**
 
-   $$
-   F_{\text{Electromagnetic}} = \frac{k\,q_1q_2}{d^2}\,,
-   $$
+![Felectromagnetic](https://github.com/user-attachments/assets/26ccea77-9ec4-46a1-8c8b-f5507cc8a921)
 
    where \(k\) is Coulomb’s constant and \(q_1, q_2\) are charges.
 
 3. **Strong Force:**
 
-   $$
-   F_{\text{Strong}} = \frac{C\,e^{-d/\lambda_w}}{d^2}\,,
-   $$
+![Fstrong](https://github.com/user-attachments/assets/955376ad-7d65-449e-9c31-532be2ce43b3)
 
    with \(C\) a constant and \(\lambda_w\) a characteristic length.
 
 4. **Weak Force:**
 
-   $$
-   F_{\text{Weak}} = \frac{S\,e^{-d/d_{\text{cutoff}}}}{d^2}\,,
-   $$
+![Fweak](https://github.com/user-attachments/assets/447ee72a-8aff-4aa8-b6de-7bdcc0cc91be)
 
    with \(S\) a constant and \(d_{\text{cutoff}}\) a cutoff distance.
 
@@ -79,17 +71,13 @@ The Unified Force Model seeks to merge all fundamental interactions (gravitation
 
    To capture the deep interconnectivity and the infinite series of interactions present in any bound system, we include a harmonic correction term
 
-   $$
-   H_C = \sum_{n=1}^{\infty} \frac{1}{\pi^{3n}-1}\,.
-   $$
+![HarmonicCorrection](https://github.com/user-attachments/assets/faa9bf72-c479-4c6d-8649-a0f063e551d2)
 
 6. **Imaginary Correction Constant:**
 
    Balancing the harmonic structure, an imaginary series is introduced
 
-   $$
-   I_C = \sum_{n=1}^{\infty} \frac{i}{\pi^{3n}-1}\,.
-   $$
+![ImaginaryCorrection](https://github.com/user-attachments/assets/e269e41e-83f4-42be-8bbc-5544815bf415)
 
    Although \(I_C\) is imaginary, its interplay with \(H_C\) is essential for the full description of the system’s harmonic state.
 
@@ -97,15 +85,11 @@ The Unified Force Model seeks to merge all fundamental interactions (gravitation
 
    A fixed “lift” is added to account for the spatial expansion observed when quarks bind to form atoms. Initially, one might take
 
-   $$
-   L_{\epsilon} = 0.5\,,
-   $$
+![EpsilonicLift](https://github.com/user-attachments/assets/ac2aecda-ddf4-4811-b932-d3ca2aaa0b3a)
 
    but to ensure consistency with the GR correction, we define it as
 
-   $$
-   L_{\epsilon} = F_{\text{Gravity}} \cdot \frac{3GM}{dc^2}\,.
-   $$
+![image](https://github.com/user-attachments/assets/48ad9198-7031-4f05-9a84-26197d3c00a6)
 
    This choice guarantees that when the unified force is evaluated, the residual correction exactly supplies the missing contribution needed to transform the Newtonian force into the Einstein force.
 
@@ -143,53 +127,38 @@ To show that the Unified Force Model reconciles classical, relativistic, and qua
 
    Starting from Newton’s law,
 
-   $$
-   F_{\text{Gravity}} = \frac{GMm}{d^2}\,,
-   $$
+![Fgravity](https://github.com/user-attachments/assets/25eb106c-dcb9-46a2-94a7-aea7c78d2013)
 
    Einstein’s correction is introduced as
 
-   $$
-   F_{\text{Einstein}} = F_{\text{Gravity}}\left(1 + \frac{3GM}{dc^2}\right)\,.
-   $$
+![image](https://github.com/user-attachments/assets/0a3f4f07-0122-41d7-adfd-d6d84fa0551d)
 
    The extra term can be expressed as
 
-   $$
-   F_{\text{Residual}} = F_{\text{Gravity}} \cdot \frac{3GM}{dc^2}\,.
-   $$
 
 2. **Incorporation into the Unified Model:**
 
    In our unified equation, we let
 
-   $$
-   L_{\epsilon} = F_{\text{Gravity}} \cdot \frac{3GM}{dc^2}\,,
-   $$
+![image](https://github.com/user-attachments/assets/b5bd066b-bbb2-47fc-b2bc-e22301ba53d2)
 
    ensuring that
 
-   $$
-   F_{\text{Unified, Real}} = F_{\text{Gravity}} + L_{\epsilon} = F_{\text{Einstein}}\,.
-   $$
+![image](https://github.com/user-attachments/assets/7a131644-1f3e-406f-870c-43f6907d4e9b)
 
-3. **Application to the Hydrogen Atom:**
+4. **Application to the Hydrogen Atom:**
 
    When calculating the unified force for the atomic structure of hydrogen, we sum the individual contributions:
 
-   $$
-   F_{\text{Atom}} = \left(\sum F_{\text{Quark}}\right) + \left(H_C + I_C\right) + L_{\epsilon}\,.
-   $$
+![image](https://github.com/user-attachments/assets/cff1fb11-2721-4b74-8929-e39f1d0343de)
 
    Observations show that the quark contributions plus the harmonic corrections fall short by one unit, which is exactly the force provided by \(L_{\epsilon}\). This missing term is necessary to reconcile the unified force with the observed atomic mass.
 
-4. **Scaling and Harmonization:**
+5. **Scaling and Harmonization:**
 
    The scaling factor \(S_{UF}\) that naturally arises from the ratio of the real and imaginary contributions confirms that
 
-   $$
-   S_{UF} = \frac{F_{\text{Gravity}}}{F_{\text{Unified, Real}}}\,,
-   $$
+![image](https://github.com/user-attachments/assets/adb6d578-881e-491d-b92d-f69d53d13846)
 
    and when applied, it aligns the unified force with both classical (Newtonian) and relativistic (Einsteinian) predictions.
 
@@ -203,9 +172,7 @@ Through this step-by-step derivation, we have shown that:
 - In the Unified Force Model, the sum of the forces from quark-level interactions plus the infinite harmonic corrections and the epsilon lift exactly equals the total observed unified force for an atom.
 - The missing force—equivalently, the missing mass of atoms—is supplied by the infinite harmonic series (\(H_C + I_C\)), ensuring that
 
-  $$
-  F_{\text{Unified}} = \left(\sum F_{\text{Quark}}\right) + \left(H_C + I_C\right) + L_{\epsilon} = F_{\text{Atom}}\,.
-  $$
+![image](https://github.com/user-attachments/assets/84fe541a-295f-49b6-a119-243add0f0ee6)
 
 This analysis demonstrates that the unified force approach not only reconciles Newtonian and Einsteinian gravity with quantum mechanics but also provides a mechanism for the “missing mass” of atoms through the interplay of infinite harmonic corrections. In this way, the Unified Force Model offers a comprehensive framework in which classical space, relativistic curvature, and quantum interactions all emerge from a single underlying structure.
 
