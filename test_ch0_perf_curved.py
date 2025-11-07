@@ -48,4 +48,4 @@ def test_wick_rotate_scalar_lagrangian_simple():
     Lm = -sp.Rational(1,2)*sp.diff(phi,t)**2 - sp.Rational(1,2)*m**2*phi**2
     Le = U.wick_rotate_scalar_lagrangian(Lm, t, tau)
     # For the free scalar, time-derivative term flips sign into Euclidean
-    assert Le.has(sp.diff(phi, tau)**2)
+    assert Le.has(sp.diff(sp.Function('phi')(tau), tau)**2)
