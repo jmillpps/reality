@@ -10,18 +10,18 @@
 **Signature (chosen).** Minkowski $(-,+,+,+)$. *Why:* aligns with QFT pole structure, spectral positivity, and our Kubo/retarded conventions. *Alt:* $(+,-,-,-)$ is convertible but error‑prone (many kinetic/Hodge signs flip).  [Lock: Sig]
 
 **Orientation & Levi–Civita (chosen).** $\epsilon_{0123}=+\sqrt{|g|}$, $\epsilon^{0123}=+1/\sqrt{|g|}$, $[0123]=+1$.  
-**Notation lock (no drift).** $\epsilon_{\mu\nu\rho\sigma}$ = covariant Levi–Civita tensor; $[\mu\nu\rho\sigma]$ = alternating symbol.
-$$
+**Notation lock (no drift).** $`\epsilon_{\mu\nu\rho\sigma}`$ = covariant Levi–Civita tensor; $`[\mu\nu\rho\sigma]`$ = alternating symbol.
+$`
 \epsilon_{\mu\nu\rho\sigma}=\sqrt{|g|}\,[\mu\nu\rho\sigma],\qquad
 \epsilon^{\mu\nu\rho\sigma}=\frac{[\mu\nu\rho\sigma]}{\sqrt{|g|}},
-$$
-with $[0123]=+1$. Do **not** use $\varepsilon$; always $\epsilon$.  
+`$
+with $[0123]=+1$. Do **not** use $`\varepsilon`$; always $`\epsilon`$.  
 **Contraction test (must hold).** $\epsilon^{\mu\nu\rho\sigma}\epsilon_{\alpha\nu\rho\sigma}=-3!\,\delta^\mu{}_\alpha$.  [Lock: Eps]
 
-**Hodge star (chosen).** In 4D Lorentzian: $ *^2=(-1)^{p(4-p)+1}$. After Wick: $(*_E)^2=(-1)^p$.  
-**Derived identity:** $F\wedge *F=\tfrac12 F_{\mu\nu}F^{\mu\nu}\,d^4x$. *Alt pitfall:* never use Lorentzian $*$ rules in Euclidean manipulations.  [Lock: Hodge]
+**Hodge star (chosen).** In 4D Lorentzian: $` *^2=(-1)^{p(4-p)+1}`$. After Wick: $`(*_E)^2=(-1)^p`$.  
+**Derived identity:** $`F\wedge *F=\tfrac12 F_{\mu\nu}F^{\mu\nu}\,d^4x`$. *Alt pitfall:* never use Lorentzian $*$ rules in Euclidean manipulations.  [Lock: Hodge]
 
-**Two traces, two worlds (chosen).** $\mathrm{Tr}$ = gauge traces with $\mathrm{Tr}(T^AT^B)=\delta^{AB}$; $\mathrm{tr}$ = spinor/Lorentz traces (e.g., $\mathrm{tr}\,\mathbb 1_4=4$). *Alt:* $\mathrm{Tr}(T^AT^B)=\tfrac12\delta^{AB}$ appears in the literature; cross‑maps in §0.10/§0.21.  [Lock: Traces]
+**Two traces, two worlds (chosen).** $`\mathrm{Tr}`$ = gauge traces with $`\mathrm{Tr}(T^AT^B)=\delta^{AB}`$; $`\mathrm{tr}`$ = spinor/Lorentz traces (e.g., $`\mathrm{tr}\,\mathbb 1_4=4`$). *Alt:* $`\mathrm{Tr}(T^AT^B)=\tfrac12\delta^{AB}`$ appears in the literature; cross‑maps in §0.10/§0.21.  [Lock: Traces]
 
 **Couplings explicit (chosen).** $F=dA+g\,A\wedge A$, $D_\mu=\partial_\mu+i g\,A_\mu^A T^A$.  
 *Why:* makes AB phases, RG flow, and ledger bookkeeping transparent.  [Lock: g‑explicit]
@@ -40,8 +40,8 @@ with $[0123]=+1$. Do **not** use $\varepsilon$; always $\epsilon$.
 ## 0.2 Indices, frames, forms
 
 **Indices.** Spacetime $\mu,\nu$; spatial $i,j$; tangent $a,b$; adjoint $A,B$; rep $I,J$.  
-**Tetrad ladder.** $g_{\mu\nu}=\eta_{ab}e^a{}_\mu e^b{}_\nu$; $V^a=e^a{}_\mu V^\mu$; $V_\mu=e^a{}_\mu\eta_{ab}V^b$.  
-**Exterior calculus.** $d^2=0$; $\alpha\wedge\beta=(-1)^{pq}\beta\wedge\alpha$; $\alpha\wedge *\beta=\langle\alpha,\beta\rangle\,\mathrm{vol}_4$.  
+**Tetrad ladder.** $`g_{\mu\nu}=\eta_{ab}e^a{}_\mu e^b{}_\nu`$; $`V^a=e^a{}_\mu V^\mu`$; $`V_\mu=e^a{}_\mu\eta_{ab}V^b`$.  
+**Exterior calculus.** $`d^2=0`$; $`\alpha\wedge\beta=(-1)^{pq}\beta\wedge\alpha`$; $`\alpha\wedge *\beta=\langle\alpha,\beta\rangle\,\mathrm{vol}_4`$.  
 **Symmetrization (weight one).** $A_{(\mu\nu)}, A_{[\mu\nu]}, A_{(\mu|\alpha|\nu)}$.  [Lock: Frames&Forms]
 
 **Checklist 0.2:** tetrad ladder; weight‑one sym; wedge/inner‑product.
@@ -50,12 +50,13 @@ with $[0123]=+1$. Do **not** use $\varepsilon$; always $\epsilon$.
 
 ## 0.3 Measures, deltas, and foliation (ADM)
 
-**Volumes.** $\mathrm{vol}_4=\sqrt{|g|}\,d^4x$; spatial $dV=\sqrt{\gamma}\,d^3x$.  
+**Volumes.** $`\mathrm{vol}_4=\sqrt{|g|}\,d^4x`$; spatial $`dV=\sqrt{\gamma}\,d^3x`$.  
 **ADM & extrinsic curvature.** $(N,N^i,\gamma_{ij})$, $K_{ij}=\frac{1}{2N}(\dot\gamma_{ij}-D_iN_j-D_jN_i)$ (sign matches §0.12).  
 **Covariant delta (foliation‑independent).**
-$$
+$`
 \boxed{\ \delta^{(4)}_g(x,x_0)=\frac{\delta(t-t_0)}{N(t_0,\mathbf x_0)}\,\delta^{(3)}_\gamma(\mathbf x,\mathbf x_0),\qquad \int d^4x\,\sqrt{|g|}\,\delta^{(4)}_g=1\ } \quad\text{[Lock: ADM‑δ]}
-$$
+`$
+
 **Spherical identities.** $\nabla^2(1/r)=-4\pi\,\delta^{(3)}(\mathbf r)$; $\delta^{(3)}(\mathbf r)=\delta(r)/(4\pi r^2)$.
 
 **Checklist 0.3:** ADM‑δ with $N$; $\sqrt\gamma$ in 3D; $K_{ij}$ sign ↔ §0.12.
@@ -67,18 +68,18 @@ $$
 **Lie algebra.** Hermitian $T^A$, $[T^A,T^B]=i f^{ABC}T^C$, $\mathrm{Tr}(T^AT^B)=\delta^{AB}$.  
 **Connections & strength.** $D_\mu=\partial_\mu+i g\,A_\mu^A T^A$; $F=dA+g\,A\wedge A$; $F_{\mu\nu}^A=\partial_\mu A_\nu^A-\partial_\nu A_\mu^A+g f^{ABC}A_\mu^B A_\nu^C$.  
 **Wilson loops (normalization fixed).**
-$$
+$`
 \boxed{\ W_R[\gamma]=\frac{1}{\dim R}\,\mathrm{Tr}_R\,\mathcal P\exp\!\Big(i g\oint_\gamma A\Big)\ },\quad z_\gamma\in Z(G). \quad\text{[Lock: Wilson]}
-$$
+`$
 **Checklist 0.4:** $g$ explicit; trace norm fixed; Wilson norm fixed; $z_\gamma$ logged.
 
 ---
 
 ## 0.5 Gravity, torsion, contorsion (first‑order form)
 
-**Cartan structure.** $T^a=De^a=de^a+\omega^a{}_b\wedge e^b$; $R^a{}_b=d\omega^a{}_b+\omega^a{}_c\wedge\omega^c{}_b$.  
-**Contorsion.** $K^\rho{}_{\mu\nu}=\tfrac12(T^\rho{}_{\mu\nu}-T_\mu{}^\rho{}_\nu+T_\nu{}^\rho{}_\mu)$; $T^\rho{}_{\mu\nu}=2K^\rho{}_{[\mu\nu]}$.  
-**Irreducible torsion.** $t_\mu$, $S_\mu=\tfrac{1}{6}\epsilon_{\mu\nu\rho\sigma}T^{\nu\rho\sigma}$, $q_{\mu\nu\rho}$ (traceless). *Policy:* do not propagate $q$ (spin‑2 ghost hazard).  
+**Cartan structure.** $`T^a=De^a=de^a+\omega^a{}_b\wedge e^b`$; $`R^a{}_b=d\omega^a{}_b+\omega^a{}_c\wedge\omega^c{}_b`$.  
+**Contorsion.** $`K^\rho{}_{\mu\nu}=\tfrac12(T^\rho{}_{\mu\nu}-T_\mu{}^\rho{}_\nu+T_\nu{}^\rho{}_\mu)`$; $`T^\rho{}_{\mu\nu}=2K^\rho{}_{[\mu\nu]}`$.  
+**Irreducible torsion.** $`t_\mu`$, $`S_\mu=\tfrac{1}{6}\epsilon_{\mu\nu\rho\sigma}T^{\nu\rho\sigma}`$, $`q_{\mu\nu\rho}`$ (traceless). *Policy:* do not propagate $q$ (spin‑2 ghost hazard).  
 **Bianchi.** $DT^a=R^a{}_b\wedge e^b,\quad DR^a{}_b=0$.  [Lock: Bianchi]
 
 **Checklist 0.5:** $T=De$; $R=d\omega+\omega\wedge\omega$; $K$–$T$; irreps; Bianchi.
@@ -99,10 +100,10 @@ $$
 
 **Clifford algebra.** $\{\gamma^a,\gamma^b\}=2\eta^{ab}$; $\gamma^\mu=e_a{}^\mu\gamma^a$; $\gamma^{ab}=\tfrac12[\gamma^a,\gamma^b]$; $\gamma^5=i\gamma^0\gamma^1\gamma^2\gamma^3$; $\bar\psi=\psi^\dagger\gamma^0$.  
 **Spinor derivative & commutator.**
-$$
+$`
 D_\mu\psi=\Big(\partial_\mu+\tfrac14\,\omega_\mu{}^{ab}\gamma_{ab}+i g\,A_\mu^A T^A\Big)\psi,\qquad
 [D_\mu,D_\nu]\psi=\tfrac14 R_{\mu\nu}{}^{ab}\gamma_{ab}\psi+i g\,F_{\mu\nu}\psi.
-$$
+`$
 **Minimal torsion source.** Only axial $S_\mu$ couples at tree level to $J_5^\mu=\bar\psi\gamma^\mu\gamma^5\psi$; $t_\mu$ is unsourced.  
 **Euclidean Clifford (Hermitian).** $\{\gamma_E^\mu,\gamma_E^\nu\}=2\delta^{\mu\nu}$, $(\gamma_E^\mu)^\dagger=\gamma_E^\mu$, $\gamma_E^5=\gamma_E^1\gamma_E^2\gamma_E^3\gamma_E^4$ with $(\gamma_E^5)^\dagger=\gamma_E^5$. Map $\gamma_E^4=\gamma^0$, $\gamma_E^i=i\,\gamma^i$ so $\bar\psi\,i\gamma^\mu D_\mu\psi\mapsto \bar\psi_E\,\gamma_E^\mu D_\mu\psi_E$ and $S_E$ is real/positive in the free limit.  [Lock: GammaE]  
 **Dim‑reg $\gamma^5$.** Larin‑style: treat $\gamma^5$ as 4D; in $d=4-2\epsilon$ replace axial currents by the $\epsilon$‑tensor form and apply finite $Z_5$ to restore Ward identities.  [Lock: Larin]
@@ -130,12 +131,12 @@ $\displaystyle \int dt\,d^3x\,e^{\,i(\omega t-\mathbf k\cdot\mathbf x)}=(2\pi)^4
 ## 0.9 Wick rotation (Euclidean rules) — path‑integral weight and map
 
 **Path‑integral weight & continuation.**  
-$Z=\int \mathcal D\Phi\,e^{\,iS_L[\Phi]}$,\quad $S_E[\Phi_E]\equiv -i\,S_L[\Phi]\big|_{t\to -i\tau}$,\quad $Z=\int \mathcal D\Phi_E\,e^{-S_E[\Phi_E]}$.  
-With $\Box=g^{\mu\nu}\nabla_\mu\nabla_\nu$ (sig $(-,+,+,+)$): $-\tfrac12\,\partial_\mu\phi\,\partial^\mu\phi\mapsto +\tfrac12(\partial\phi)_E^2$, $-\tfrac12\,\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})\mapsto +\tfrac12\,\mathrm{Tr}(F_{E,\mu\nu}F_E^{\mu\nu})$.  [Lock: Wick]
+$`Z=\int \mathcal D\Phi\,e^{\,iS_L[\Phi]}`$,\quad $`S_E[\Phi_E]\equiv -i\,S_L[\Phi]\big|_{t\to -i\tau}`$,\quad $`Z=\int \mathcal D\Phi_E\,e^{-S_E[\Phi_E]}`$.  
+With $`\boxed{\ g^{\mu\nu}\nabla_\mu\nabla_\nu}`$ (sig $`(-,+,+,+)`$): $`-\tfrac12\,\partial_\mu\phi\,\partial^\mu\phi\mapsto +\tfrac12(\partial\phi)_E^2`$, $`-\tfrac12\,\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})\mapsto +\tfrac12\,\mathrm{Tr}(F_{E,\mu\nu}F_E^{\mu\nu})`$.  [Lock: Wick]
 
-**Tetrad map (chosen).** $e^{0}_{(E)}=i\,e^{0}$, $e^{i}_{(E)}=e^{i}$ → $g^{(E)}_{\mu\nu}=\delta_{ab}\,e^a_{(E)\mu}e^b_{(E)\nu}$ (positive‑definite).  
-**Equivalent metric line (when cross‑terms vanish).** $g^{(E)}_{00}=-g_{00}$, $g^{(E)}_{0i}=0$, $g^{(E)}_{\mu\nu}=\delta_{\mu\nu}$.  
-**Duals & epsilon.** $(*_E)^2=(-1)^p$; $\epsilon^{0123}_{(E)}=+1$, $\epsilon_{(E)0123}=+\sqrt{g_E}$.  
+**Tetrad map (chosen).** $`e^{0}_{(E)}=i\,e^{0}`$, $`e^{i}_{(E)}=e^{i}`$ → $`g^{(E)}_{\mu\nu}=\delta_{ab}\,e^a_{(E)\mu}e^b_{(E)\nu}`$ (positive‑definite).  
+**Equivalent metric line (when cross‑terms vanish).** $`g^{(E)}_{00}=-g_{00}`$, $`g^{(E)}_{0i}=0`$, $`g^{(E)}_{\mu\nu}=\delta_{\mu\nu}`$.  
+**Duals & epsilon.** $`(*_E)^2=(-1)^p`$; $`\epsilon^{0123}_{(E)}=+1`$, $`\epsilon_{(E)0123}=+\sqrt{g_E}`$.  
 **Ledgers.** $(c_1,\nu_G,\nu_R,k,\ldots)$ unchanged.
 
 **Checklist 0.9:** Wick map; Euclid $*$; Euclid $\epsilon$; ledgers unchanged.
@@ -150,9 +151,9 @@ $\displaystyle \nu_G=\frac{1}{8\pi^2}\int \mathrm{Tr}(F\wedge F)=\frac{1}{32\pi^
 **Chern–Simons (with explicit $g$).**  
 $\displaystyle S_{CS}=\frac{k}{4\pi}\int \mathrm{Tr}\big(A\wedge dA+\tfrac{2}{3}g\,A\wedge A\wedge A\big),\quad k\in\mathbb Z.$  
 Under $A\mapsto U^{-1}AU+\tfrac{i}{g}U^{-1}dU$, the integer $k$ is independent of $g$. Defining $\mathcal A\equiv gA$ gives
-$$
+$`
 S_{CS}=\frac{k}{4\pi g^2}\int \mathrm{Tr}\!\big(\mathcal A\wedge d\mathcal A+\tfrac{2}{3}\mathcal A\wedge\mathcal A\wedge\mathcal A\big).
-$$
+`$
 **Trace/level cross‑table.**
 
 | Gauge trace convention | $\mathrm{Tr}(T^AT^B)$ | Level mapping |
@@ -214,7 +215,7 @@ $G^R(\omega,\mathbf k)=\int_0^\infty d\mu^2\,\rho(\mu^2,\mathbf k)\,[\!-(\omega+
 ## 0.15 Variation identities and stress–energy (sign‑locked)
 
 **IBP.** $\int \sqrt{|g|}\,A\,\nabla_\mu B^\mu=-\int \sqrt{|g|}\,(\nabla_\mu A)B^\mu+\text{bdy}$.  
-**Hodge variation.** Fixed $g$: $\delta(*\alpha)=*(\delta\alpha)$. Varying $g$: propagate $\delta g$ through $\epsilon$ and contractions.
+**Hodge variation.** Fixed $g$: $`\delta(*\alpha)=*(\delta\alpha)`$. Varying $g$: propagate $\delta g$ through $\epsilon$ and contractions.
 
 **Stress–energy (standard).**  
 $T_{\mu\nu}^{(S)}=H_{\mu\alpha}H_\nu{}^\alpha-\tfrac14 g_{\mu\nu}H^2+m_S^2(S_\mu S_\nu-\tfrac12 g_{\mu\nu}S^2)$;  
@@ -228,15 +229,15 @@ $\boxed{\ T_{\mu\nu}^{(\phi)}=\partial_\mu\phi\,\partial_\nu\phi-\tfrac12 g_{\mu
 ## 0.16 Projectors, polarization sums, Stückelberg (UV diagnostics)
 
 **Massive spin‑1 polarization sum.**
-$$
+$`
 \boxed{\ \sum_{\lambda=1}^{3}\epsilon^{\mu}_{(\lambda)}(p)\,\epsilon^{\nu}_{(\lambda)}(p)= g^{\mu\nu}+\frac{p^{\mu}p^{\nu}}{m^2}\equiv \Pi^{\mathrm T\,\mu\nu}(p)\ } \Rightarrow \Pi^{\mathrm T}=\mathrm{diag}(0,1,1,1)\ \text{in rest frame}.
-$$
+`$
 [Lock: Proj‑1]
 
 **Barnes–Rivers projectors (rank‑2).** With $\theta_{\mu\nu}=g_{\mu\nu}-p_\mu p_\nu/p^2$, $\omega_{\mu\nu}=p_\mu p_\nu/p^2$:  
 $P^{(2)}, P^{(1)}, P^{(0\!-\!s)}, P^{(0\!-\!w)}$ as standard. *Usage:* for $p^2\neq0$; after Wick $p^2\to -k_E^2$; handle $p^2\to0$ by limits.  [Lock: BR]
 
-**Stückelberg (vectors).** $S_\mu=\hat S_\mu+\partial_\mu\pi/m$, $\partial\!\cdot\!\hat S=0$; exposes longitudinal power counting; residues positive in physical sectors.  [Lock: Stk]
+**Stückelberg (vectors).** $`S_\mu=\hat S_\mu+\partial_\mu\pi/m`$, $`\partial\!\cdot\!\hat S=0`$; exposes longitudinal power counting; residues positive in physical sectors.  [Lock: Stk]
 
 **Checklist 0.16:** residues positive; spin‑2 projected out; Stückelberg used.
 
@@ -244,8 +245,8 @@ $P^{(2)}, P^{(1)}, P^{(0\!-\!s)}, P^{(0\!-\!w)}$ as standard. *Usage:* for $p^2\
 
 ## 0.17 Spherical harmonics (scalar/vector/tensor)
 
-**Scalar.** $\int Y_{\ell m}^*Y_{\ell' m'}\,d\Omega=\delta_{\ell\ell'}\delta_{mm'}$; $\nabla^2 Y_{\ell m}=-\ell(\ell+1)Y_{\ell m}$.  
-**Vector (on $S^2$).** $Y^{E}_{(\ell m)i}=D_i Y_{\ell m}$, $Y^{B}_{(\ell m)i}=\epsilon_i{}^{j}D_j Y_{\ell m}$; indices via $\gamma_{ij}$.  
+**Scalar.** $`\int Y_{\ell m}^*Y_{\ell' m'}\,d\Omega=\delta_{\ell\ell'}\delta_{mm'}`$; $`\nabla^2 Y_{\ell m}=-\ell(\ell+1)Y_{\ell m}`$.  
+**Vector (on $S^2$).** $`Y^{E}_{(\ell m)i}=D_i Y_{\ell m}`$, $`Y^{B}_{(\ell m)i}=\epsilon_i{}^{j}D_j Y_{\ell m}`$; indices via $\gamma_{ij}$.  
 **Tensor (on $S^2$).** Trace‑removed parts from $D_iD_j Y_{\ell m}$.  
 **Levi–Civita on $S^2$.** $\epsilon_{ij}=\sqrt{\gamma}\,\hat\epsilon_{ij}$, $\hat\epsilon_{\theta\phi}=+1$; raise/lower by $\gamma_{ij}$.  [Lock: S2‑Eps]
 
@@ -264,11 +265,11 @@ $P^{(2)}, P^{(1)}, P^{(0\!-\!s)}, P^{(0\!-\!w)}$ as standard. *Usage:* for $p^2\
 
 ## 0.19 Kernel one‑liners (time/frequency/static/HE) — with normalization identities
 
-**Distributional Green’s identities.** $(\Box+m^2)\,G^R(x)=\delta^{(4)}_g(x)$, $(\nabla^2-m^2)\,G(\mathbf r)=-\delta^{(3)}(\mathbf r)$.  [Lock: G‑IDs]  
-**Retarded pole (KG/Proca).** $G^R(\omega,\mathbf k)=[-(\omega+i0^+)^2+\mathbf k^2+m^2]^{-1}$, $G^R(t<0)=0$.  
-**Proca time‑domain (3+1D).** $G^R(t,r)=\frac{\Theta(t)}{4\pi r}\!\left[\delta(t-r)-m\,\frac{J_1(m\sqrt{t^2-r^2})}{\sqrt{t^2-r^2}}\Theta(t-r)\right]$.  
-**Static Yukawa.** $G(\mathbf r)=-(4\pi r)^{-1}e^{-mr}$.  
-**EC contact (heavy axial mediator).** $\Delta\mathcal L_{\rm eff}=-(g_S^2/2m_S^2)\,J_5^\mu J^5_\mu+O(m_S^{-4})$.
+**Distributional Green’s identities.** $`(\Box+m^2)\,G^R(x)=\delta^{(4)}_g(x)`$, $`(\nabla^2-m^2)\,G(\mathbf r)=-\delta^{(3)}(\mathbf r)`$.  [Lock: G‑IDs]  
+**Retarded pole (KG/Proca).** $`G^R(\omega,\mathbf k)=[-(\omega+i0^+)^2+\mathbf k^2+m^2]^{-1}`$, $`G^R(t<0)=0`$.  
+**Proca time‑domain (3+1D).** $`G^R(t,r)=\frac{\Theta(t)}{4\pi r}\!\left[\delta(t-r)-m\,\frac{J_1(m\sqrt{t^2-r^2})}{\sqrt{t^2-r^2}}\Theta(t-r)\right]`$.  
+**Static Yukawa.** $`G(\mathbf r)=-(4\pi r)^{-1}e^{-mr}`$.  
+**EC contact (heavy axial mediator).** $`\Delta\mathcal L_{\rm eff}=-(g_S^2/2m_S^2)\,J_5^\mu J^5_\mu+O(m_S^{-4})`$.
 
 **Checklist 0.19:** use appropriate regime line; identities applied.
 
@@ -276,7 +277,11 @@ $P^{(2)}, P^{(1)}, P^{(0\!-\!s)}, P^{(0\!-\!w)}$ as standard. *Usage:* for $p^2\
 
 ## 0.20 Operation recipes (compact, always visible)
 
-**(R1) Derivation header.** Sig & Eps; indices; reps & $\mathrm{Tr}$; geometry $(e,\omega;R,T)$ or metric‑affine with $Q$/$\Lambda^{\alpha\mu\nu}$; gauge $(D,F)$; matter couplings; measures/ADM‑δ; duals; FT/Kubo; ledger.  
+**(R1) Derivation header.** Sig & Eps; indices; reps & $\mathrm{Tr}$; geometry $(e,\omega;R,T)$ or metric‑affine with 
+$`
+\frac{Q}{\Lambda^{\alpha\mu\nu}}
+`$
+; gauge $(D,F)$; matter couplings; measures/ADM‑δ; duals; FT/Kubo; ledger.  
 **(R2) Wick audit.** $t\to -i\tau$; $(*_E)^2=(-1)^p$; Euclid $\epsilon$; ledgers unchanged.  
 **(R3) Linear response.** Ret analyticity; $\rho=-2\Im G^R$; DC via $\Im G^R/\omega$, $\mathbf k=0$, include $\sqrt\gamma$.  
 **(R4) Heavy‑field integrate‑out.** Solve algebraic EOM for $m^2\gg\partial^2$; substitute; keep $O(\partial^2/m^4)$.  
@@ -288,7 +293,7 @@ $P^{(2)}, P^{(1)}, P^{(0\!-\!s)}, P^{(0\!-\!w)}$ as standard. *Usage:* for $p^2\
 
 ## 0.21 Literature crosswalk (torsion & traces)
 
-**Axial dualization.** UGFT $S_\mu=\tfrac{1}{6}\epsilon_{\mu\nu\rho\sigma}T^{\nu\rho\sigma}$. If source uses $S'_\mu=c\,\epsilon_{\mu\nu\rho\sigma}T^{\nu\rho\sigma}$, then $S'_\mu=(6c)\,S_\mu$, $g'_S=g_S/(6c)$.  
+**Axial dualization.** UGFT $S_\mu=\tfrac{1}{6}\epsilon_{\mu\nu\rho\sigma}T^{\nu\rho\sigma}$. If source uses $`S'_\mu=c\,\epsilon_{\mu\nu\rho\sigma}T^{\nu\rho\sigma}`$, then $`S'_\mu=(6c)\,S_\mu`$, $`g'_S=g_S/(6c)`$.  
 **Trace vector.** If $t'_\mu=\sigma\,T^\nu{}_{\mu\nu}$, then $t'_\mu=\sigma\,t_\mu$ and couplings flip with $\sigma$.  
 **YM kinetic.** $-\tfrac12\mathrm{Tr}(F^2)$ ↔ $-\tfrac14 F^A F^A$ with $\mathrm{Tr}=\tfrac12\delta^{AB}$.  
 **CS level.** Rescale $k$ per §0.10 when switching trace conventions.  [Lock: X‑walk]
@@ -301,7 +306,7 @@ $P^{(2)}, P^{(1)}, P^{(0\!-\!s)}, P^{(0\!-\!w)}$ as standard. *Usage:* for $p^2\
 
 **YM (no matter).** $S=-\tfrac12\!\int\! \mathrm{Tr}(F\wedge *F)\Rightarrow D_\mu F^{\mu\nu}=0$.  
 **Dirac + gauge + curved.** $\mathcal L=\bar\psi(i\gamma^\mu D_\mu-m)\Rightarrow (i\gamma^\mu D_\mu-m)\psi=0$; $[D_\mu,D_\nu]\psi=\tfrac14 R_{\mu\nu}{}^{ab}\gamma_{ab}\psi+i g\,F_{\mu\nu}\psi$.  
-**Axial torsion.** $(\Box+m_S^2)S_\mu=g_S J_5^\mu$ with kernels of §0.19 and EC limit.  
+**Axial torsion.** $`(\boxed{\ +m_S^2 })S_\mu=g_S J_5^\mu`$ with kernels of §0.19 and EC limit.  
 *More worked examples live in “Examples Pack A”.*  [Lock: Ex]
 
 ---
@@ -324,7 +329,7 @@ $P^{(2)}, P^{(1)}, P^{(0\!-\!s)}, P^{(0\!-\!w)}$ as standard. *Usage:* for $p^2\
 
 ## Appendix A — Wall Chart (At‑a‑Glance)
 
-- **Signature & Hodge.** $(-,+,+,+)$; $ *^2=(-1)^{p(4-p)+1}$; after Wick $(*_E)^2=(-1)^p$. [Lock: Sig][Lock: Hodge]  
+- **Signature & Hodge.** $(-,+,+,+)$; $` *^2=(-1)^{p(4-p)+1}`$; after Wick $`(*_E)^2=(-1)^p`$. [Lock: Sig][Lock: Hodge]  
 - **Orientation.** $\epsilon_{0123}=+\sqrt{|g|}$, $\epsilon^{0123}=+1/\sqrt{|g|}$; $[\cdot]$ is alternating symbol. [Lock: Eps]  
 - **Fourier pair.** $\tilde f=\int e^{\,i(\omega t-\mathbf k\cdot\mathbf x)}f$; $f=\int (2\pi)^{-4}e^{-i(\omega t-\mathbf k\cdot\mathbf x)}\tilde f$. [Lock: FT]  
 - **Delta & Plancherel.** Phase‑consistent δ’s; $\int|f|^2=\int(2\pi)^{-4}|\tilde f|^2$. [Lock: Delta][Lock: Plancherel]  
