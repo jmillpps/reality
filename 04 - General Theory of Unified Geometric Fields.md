@@ -7,7 +7,7 @@
 - 4.1.3 Connectivity Map
 
 ### 4.1.2 Introduction
-_See also:_ §4.2, §4.3, §4.4, §4.5, §4.7, §4.8, §4.9, §4.10, §4.11, §4.12, §4.13, §4.14; C0 §0.1–0.4, C2 §0–6, C5 §5.0–5.6, C1 §0–1.2
+_See also:_ C0 §0.1–0.4, C2 §0–6, C5 §5.0–5.6, C1 §0–1.2
 
 1\. Introduction — from textbook physics to UGFT
 ================================================
@@ -109,27 +109,6 @@ The rest of Chapter 4 delivers the pieces this introduction only names:
 *   The **MET** proof that locks bulk + boundary energy into one invariant statement.
 *   The **falsifiability pack** (signal speeds, DC positivity, short-range spin–spin, gauge-slice invariance, boundary balance).
 
-### 4.1.3 Connectivity Map
-**Within Chapter 4 (closely related):**
-- §4.2 — Eponyms
-- §4.3 — Classical starting point — standard actions & EOM
-- §4.4 — UGFT action (bulk, boundary, topology) and the MGSP1 policy
-- §4.5 — Miller Field Equation Set (MFES) — full classical system
-- §4.7 — The Miller Equivalence Theorem (MET) — statement & proof sketch
-- §4.8 — Equivalence-first computation (MEFP) and MPSD lanes
-- §4.9 — Causality, hyperbolicity, response & dispersion (MDPC)
-- §4.10 — Boundary, uniqueness, topology & ledgers (MBLC + MLCP)
-- §4.11 — Spectral standardization — the Miller Transform (MT)
-- §4.12 — Sanity limits & effective descriptions
-- §4.13 — Legacy & intermediate forms
-- §4.14 — Health, gauge-slice independence, and audits
-
-**External chapters (C#):**
-- C0 §0.1–0.4
-- C2 §0–6
-- C5 §5.0–5.6
-- C1 §0–1.2
-
 ---
 
 ## 4.2 Table of Contents and Introduction
@@ -139,7 +118,7 @@ The rest of Chapter 4 delivers the pieces this introduction only names:
 - 4.2.3 Connectivity Map
 
 ### 4.2.2 Eponyms
-_See also:_ §4.1, §4.4, §4.5, §4.7, §4.8, §4.9, §4.10, §4.11, §4.12, §4.13, §4.14; C0 §0.1–0.4, C5 §5.1–5.3
+_See also:_ C0 §0.1–0.4, C5 §5.1–5.3
 
 2\. Author‑defined eponyms (canonicalized for this paper)
 =========================================================
