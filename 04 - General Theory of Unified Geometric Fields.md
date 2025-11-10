@@ -188,7 +188,7 @@ with  $T^{\rm total}_{\mu\nu}$  the sum of sector stresses computed under the OS
 
 **Contract (statement).**
 
- $$
+$$
 \boxed{\,E_{\rm total}=\int_{\Sigma} N\sqrt{h}\;T^{0}{}_{0,\,\rm total}\;+\;E_{\rm grav}^{\rm ADM}[\partial\Sigma] \equiv c^2\,M_{\rm ADM}\, .}
 $$
 
@@ -224,13 +224,13 @@ $$
 **Contract (core entries).**
 
 *   **Vectors (Helmholtz–Proca).**  
-     $\Pi^{\rm T}{}^\mu{}_\nu=\delta^\mu{}_\nu-\nabla^\mu\nabla_\nu/\Box$ ,  
-     $S^\mu = g_S(\Box+m_S^2)^{-1}\,\Pi^{\rm T}{}^\mu{}_\nu J_5^\nu$ ,  
-     $\nabla_\mu S^\mu=(g_S/m_S^2)\nabla_\mu J_5^\mu$  (algebraic longitudinal).
+     $`\Pi^{\rm T}{}^\mu{}_\nu=\delta^\mu{}_\nu-\nabla^\mu\nabla_\nu/\Box`$ ,  
+     $`S^\mu = g_S(\Box+m_S^2)^{-1}\,\Pi^{\rm T}{}^\mu{}_\nu J_5^\nu`$ ,  
+     $`\nabla_\mu S^\mu=(g_S/m_S^2)\nabla_\mu J_5^\mu`$  (algebraic longitudinal).
 *   **Rank‑2 (Barnes–Rivers).**  
     Decompose  $h_{\mu\nu}$  with projectors  $P^{(2)},P^{(1)},P^{(0\text{s})},P^{(0\text{w})}$ ; invert per spin with residues checked in the chosen basis.
 *   **Two‑forms (SD/ASD).**  
-     $H_\pm=\tfrac12(H\pm i*H)$ ; in Euclidean signature, positivity is one line because  $*^2=+1$  on 2‑forms.
+     $`H_\pm=\tfrac12(H\pm i*H)`$ ; in Euclidean signature, positivity is one line because  $`*^2=+1`$  on 2‑forms.
 *   **Mixing blocks (one‑form multiplets).**  
     Use Sylvester criteria and Cholesky to produce a canonical SPD normalization without changing light cones or poles.
 
@@ -422,7 +422,7 @@ $$
 S_{\text{EH+GHY}} =\frac{1}{16\pi G}\int_{\mathcal M}\!\! d^4x\,\sqrt{|g|}\,R \;+\;\frac{1}{8\pi G}\int_{\partial\mathcal M}\!\! d^3x\,\sqrt{|h|}\,K.
 $$
 *    $\sqrt{|g|}\,R$  is the bulk curvature.
-*   The **Gibbons–Hawking–York (GHY)** term makes the variational problem well-posed if we hold the induced metric fixed at the boundary ( $ \delta h_{ij}=0$ )—without it, varying  $R$  produces a total divergence that spoils the Euler–Lagrange story.
+*   The **Gibbons–Hawking–York (GHY)** term makes the variational problem well-posed if we hold the induced metric fixed at the boundary ( $`\delta h_{ij}=0`$ )—without it, varying  $R$  produces a total divergence that spoils the Euler–Lagrange story.
 
 **Variation → field equations.** Varying  $g^{\mu\nu}$  gives
 
@@ -519,7 +519,7 @@ In a local inertial frame,  $T_{00}=\tfrac12(\dot\phi)^2+\tfrac12(\nabla\phi)^2+
 
 **Layman-first.** Fermions carry **spin and handedness**. “Right-handed” and “left-handed” refer to how an internal arrow (spin) aligns with motion. The difference between them forms the **axial current**  $J_5^\mu$ . That current will later be the one and only “plug” our new torsion field connects to.
 
-**Geometry you actually need.** In curved space we use a tetrad  $e^a{}_\mu$  and a spin connection  $\omega_\mu{}^{ab}$ . The gamma matrices are flat-space objects  $\{\gamma^a,\gamma^b\}=2\eta^{ab}$ , and  $\gamma^\mu=e^\mu{}_a\gamma^a$ . The covariant derivative acting on a spinor is
+**Geometry you actually need.** In curved space we use a tetrad  $`e^a{}_\mu`$  and a spin connection  $\omega_\mu{}^{ab}$ . The gamma matrices are flat-space objects  $\{\gamma^a,\gamma^b\}=2\eta^{ab}$ , and  $\gamma^\mu=e^\mu{}_a\gamma^a$ . The covariant derivative acting on a spinor is
 
 $$
 D_\mu\psi = \partial_\mu\psi + \frac{1}{4}\omega_{\mu ab}\gamma^{ab}\psi + i g A_\mu^A T^A\psi,
@@ -1047,9 +1047,9 @@ Everything below clarifies how these equations interlock, what initial data they
 *   **Scalars.**  $\phi$  and  $\dot\phi$ .
 *   **Dirac.**  $\psi$  on the slice (first order in time).
 *   **Axial torsion.**  $S_i$  and  $\Pi^i\equiv H^{0i}$  as genuine data;  $S_0$  is non-dynamical, fixed by the **secondary** Proca constraint
-    $$
+    $`
     \partial_i\Pi^i + m_S^2 S_0 - g_S J_5^0=0,
-    $$
+    `$
     which follows from preserving the **primary** constraint  $\Pi^0=0$ .
 
 **Well-posedness.** With boundary conditions declared (Dirichlet/Neumann/Robin/Sommerfeld per sector), the propagating blocks form a symmetric-hyperbolic system. If constraints hold initially, the equations keep them satisfied.
@@ -1063,7 +1063,7 @@ Everything below clarifies how these equations interlock, what initial data they
 
 **Symbols and cones.**
 
-*   **Axial torsion.** Principal symbol  $\mathcal P^\mu{}_\nu(k)=-k^2\delta^\mu{}_\nu+k^\mu k_\nu$  ⇒ characteristics  $k^2=0$  ⇒ **front speed = 1**.
+*   **Axial torsion.** Principal symbol  $`\mathcal P^\mu{}_\nu(k)=-k^2\delta^\mu{}_\nu+k^\mu k_\nu`$  ⇒ characteristics  $`k^2=0`$  ⇒ **front speed = 1**.
 *   **Yang–Mills (linear regime).** The Maxwell-like principal block is luminal; interactions are lower order.
 *   **Scalar/Dirac.** Standard cones; mass shifts poles but not characteristics.
 *   **Gravity (linearized).** Two spin-2 polarizations with luminal fronts in vacuum.
@@ -1093,11 +1093,11 @@ Use the secondary constraint to eliminate  $S_0$  and complete the square. The r
 **Plain picture.** Split a complicated field into independent “colors,” solve one scalar kernel per color, recombine. This is faster **and** clearer than wrestling a big tensor inverse.
 
 **Spin-1 (Helmholtz–Proca).**  
-Let  $\Pi^{\mathrm T}{}^\mu{}_\nu=\delta^\mu{}_\nu-\nabla^\mu\nabla_\nu/\Box$ . Then
+Let  $`\Pi^{\mathrm T}{}^\mu{}_\nu=\delta^\mu{}_\nu-\nabla^\mu\nabla_\nu/\Box`$ . Then
 
-$$
+$`
 S^\mu = g_S\,(\Box+m_S^2)^{-1}\,\Pi^{\mathrm T}{}^\mu{}_\nu\,J_5^\nu,\qquad \nabla\!\cdot\!S=\frac{g_S}{m_S^2}\nabla\!\cdot\!J_5.
-$$
+`$
 
 **Kernel.** In Fourier variables,  $G^R(\omega,\mathbf k)=[-(\omega+i0^+)^2+\mathbf k^2+m_S^2]^{-1}$ ; in the static limit  $G(\mathbf r)=e^{-m_S r}/(4\pi r)$ .
 
@@ -1374,7 +1374,7 @@ differs from  $T$  by a divergence on shell. Bulk positivity and equations are u
 
 **Intuition.** A spinor’s energy density is the expectation of a first-order Hamiltonian. Locally it need not be manifestly non-negative the way a square is, but in the **combined** spinor+axial system the lower bound becomes transparent once the axial longitudinal constraint is used.
 
-**Belinfante tensor (symmetric).** With tetrads  $e^a{}_\mu$  and spin connection  $\omega_{\mu ab}$ ,
+**Belinfante tensor (symmetric).** With tetrads  $`e^a{}_\mu`$  and spin connection  $`\omega_{\mu ab}`$ ,
 
 $$
 T^{(\psi)}_{\mu\nu} =\frac{i}{4}\,\bar\psi\!\left(\gamma_\mu\!\!\stackrel{\leftrightarrow}{D}_{\!\nu} +\gamma_\nu\!\!\stackrel{\leftrightarrow}{D}_{\!\mu}\right)\!\psi - g_{\mu\nu}\,\mathcal L_\psi^{\rm on\,shell},\quad \mathcal L_\psi=\bar\psi(i\gamma^\alpha D_\alpha-m_\psi)\psi .
@@ -1440,7 +1440,7 @@ The Dirac block is subtler pointwise; the **combined** system maintains the bala
 **Functional inner product and corrected quadratic form.**  
 Let  $\langle X, Y\rangle \equiv \int_{\Sigma}\!\sqrt{h}\, X\cdot Y$  denote the  $L^2$  pairing on the slice (with the appropriate index contractions suppressed for readability). For two fields  $A$  and  $B$  with a symmetric quadratic form, write
 
-  $$
+$$
 \boxed{\; \mathcal Q[A,B] =\frac12\,\Big\langle \begin{pmatrix} A \\[2pt] B \end{pmatrix}, \begin{pmatrix} K_{AA} & K_{AB} \\ K_{AB}^\dagger & K_{BB} \end{pmatrix} \begin{pmatrix} A \\[2pt] B \end{pmatrix} \Big\rangle . \;}
 $$
 
@@ -1589,13 +1589,13 @@ At the boundary  $\partial\Sigma_t$  sits gravity’s **rim coin**: the ADM surf
 
 Let  $\Sigma_t$  be a Cauchy slice with induced metric  $h_{ij}$ , lapse  $N$ , and outward unit normal  $u^\mu$  on  $\partial\Sigma_t$ . Assume the falloffs and boundary pairing below. Then:
 
-  $$
+$$
 \boxed{\; E_{\rm total}(t) = \underbrace{\int_{\Sigma_t}\! N\sqrt{h}\; T^{0}{}_{0,\rm total}}_{\displaystyle E_{\rm jar}(t)} \;+\;\underbrace{E_{\rm grav}^{\rm ADM}[\partial\Sigma_t]}_{\displaystyle \text{rim coin}} \;=\; c^2\,M_{\rm ADM}\;. \;}
 $$
 
 Notes on the equality:
 
-*    $T^{0}{}_{0,\rm total}$  is the **sum** from all bulk sectors fixed earlier (YM, scalars, Dirac, axial torsion  $S_\mu$ , …) in our sign conventions.
+*    $`T^{0}{}_{0,\rm total}`$  is the **sum** from all bulk sectors fixed earlier (YM, scalars, Dirac, axial torsion  $S_\mu$ , …) in our sign conventions.
 *    $E_{\rm grav}^{\rm ADM}$  is the gravitational surface term obtained from the ADM/Regge–Teitelboim evaluation of the canonical generator for time translations with the **GHY** pairing already in the action.
 *   Any addition of a total divergence or EOM-proportional “improvement” to a bulk Lagrangian modifies **only** the boundary posting in the ledger (the rim piece), leaving the boxed identity unchanged.
 
@@ -1806,7 +1806,7 @@ Calculation should follow the joints of the phenomenon, not the joints of our no
 
 * * *
 
-##### 4.8.2.8.1 What “equivalence” is, operationally—and the invariants we refuse to touch
+##### 4.8.2.1 What “equivalence” is, operationally—and the invariants we refuse to touch
 ------------------------------------------------------------------------------
 
 **Plain picture.** Imagine a messy white beam (a coupled field). Pass it through a prism (a projector basis). It emerges as colored beams (physical channels). You focus each beam with one lens (a scalar inverse) and then recombine. If two prisms yield the same colors and brightness on your screen, the prisms are **equivalent**.
@@ -1829,12 +1829,12 @@ Everything else—hidden sign flips, unconstrained boundary leaks, or order-of-l
 
 * * *
 
-##### 4.8.2.8.2 Lane A — Choose a basis that behaves (projectors and canonicalization)
+##### 4.8.2.2 Lane A — Choose a basis that behaves (projectors and canonicalization)
 --------------------------------------------------------------------------
 
 We first bring the quadratic form to blocks where both **cones** and **signs** can be read at a glance.
 
-### 8.2.1 One-forms (vectors): Helmholtz/Hodge split with boundary
+##### 4.8.2.2.1 One-forms (vectors): Helmholtz/Hodge split with boundary
 
 **Intuition.** Any vector field is “gradient + divergence-free + harmonic.” The third piece is global and lives at the edge.
 
@@ -1860,7 +1860,7 @@ $$
 
 _Sketch._ In Fourier variables,  $\Pi^{\mathrm T}(k)$  is rational in  $k$  and commutes with  $\mathcal D(k)$ . Non-LTI coefficients admit a parametrix  $G_0$  with  $[\Pi^{\mathrm T},G_0]$  supported at  $\partial\Omega$ ; we ledger that remainder.
 
-### 8.2.2 Rank-2 (symmetric) tensors: Barnes–Rivers in a local frame
+##### 4.8.2.2.2 Rank-2 (symmetric) tensors: Barnes–Rivers in a local frame
 
 On a local inertial patch (or exactly in flat space), decompose
 
@@ -1870,11 +1870,11 @@ $$
 
 which isolates spin–2, spin–1, and spin–0 channels. A quadratic operator  $K$  becomes  $K=\sum_s \kappa_s P^{(s)}$  plus gauge-null directions. You invert **per spin**:  $K^{-1}=\sum_s \kappa_s^{-1}P^{(s)}$  on the physical subspace. In curved backgrounds, use frames and patch; the principal symbol and residues (our invariants) are unaffected by this localization.
 
-### 8.2.3 Two-forms: self/anti-self-dual (SD/ASD) as a positivity lens
+##### 4.8.2.2.3 Two-forms: self/anti-self-dual (SD/ASD) as a positivity lens
 
 Wick to Euclidean, set  $P_\pm=\tfrac12(1\pm *)$ . Any quadratic form  $\langle H,H\rangle$  becomes  $\|H_+\|^2+\|H_-\|^2$ . Rotate back after the audit; ledger integers are Wick-invariant, so nothing physical is lost.
 
-### 8.2.4 Mixed one-forms: Sylvester/Cholesky brings clarity before physics
+##### 4.8.2.2.4 Mixed one-forms: Sylvester/Cholesky brings clarity before physics
 
 For a block quadratic functional
 
@@ -1882,16 +1882,16 @@ $$
 \mathcal Q[A,B] = \tfrac12 \Big\langle \begin{pmatrix} A \\ B \end{pmatrix}, \begin{pmatrix} K_{AA} & K_{AB} \\ K_{AB}^\dagger & K_{BB} \end{pmatrix} \begin{pmatrix} A \\ B \end{pmatrix} \Big\rangle, \qquad K=K^\dagger>0,
 $$
 
-Cholesky  $K=R^\dagger R$  and  $ (A,B)\mapsto R^{-1}(A,B)$  yields a **unit** quadratic form. Because  $R$  is local and invertible, **cones** and **poles** are unchanged; boundary cross-terms turn into superpotentials we post to the ledger.
+Cholesky  $`K=R^\dagger R`$  and  $`(A,B)\mapsto R^{-1}(A,B)`$  yields a **unit** quadratic form. Because  $R$  is local and invertible, **cones** and **poles** are unchanged; boundary cross-terms turn into superpotentials we post to the ledger.
 
 * * *
 
-##### 4.8.2.8.3 Lane B — Project → scalarize → solve (the MPSD dictionary in action)
+##### 4.8.2.3 Lane B — Project → scalarize → solve (the MPSD dictionary in action)
 ------------------------------------------------------------------------
 
 We now transform “tensor inverses” into **one scalar inverse per channel**.
 
-### 8.3.1 Spin-1 (Proca-type) channels exactly as formulas you run
+##### 4.8.2.3.1 Spin-1 (Proca-type) channels exactly as formulas you run
 
 Take any source  $J^\mu$ . After Helmholtz,
 
@@ -1913,7 +1913,7 @@ $$
 G^R(\omega,\mathbf k)=\frac{1}{-(\omega+i0^+)^2+\mathbf k^2+m^2},\qquad G^{\rm static}(\mathbf r)=\frac{e^{-m r}}{4\pi r}.
 $$
 
-### 8.3.2 Rank-2: per-spin inverses without tears
+##### 4.8.2.3 Rank-2: per-spin inverses without tears
 
 If  $K=\sum_s \kappa_s P^{(s)}$  (with gauge-null handled separately),
 
@@ -1923,11 +1923,11 @@ $$
 
 Residues are checked one spin at a time; positivity is a per-spin statement. This is the clean way to see “no ghost” without chasing components.
 
-### 8.3.3 Two-forms: split, solve, recombine
+##### 4.8.2.3.3 Two-forms: split, solve, recombine
 
 After Wick,  $H=H_+\oplus H_-$  and the inverses are  $(-\partial^2+m^2_\pm)^{-1}$  channelwise. Back in Lorentzian, SD/ASD diagonalization remains the right lens for residues and cones.
 
-### 8.3.4 Mixed vectors: Schur complement = legal “integrate out”
+##### 4.8.2.3.4 Mixed vectors: Schur complement = legal “integrate out”
 
 For
 
@@ -1945,38 +1945,38 @@ $$
 
 * * *
 
-##### 4.8.2.8.4 Lane C — Boundary & ledger corridor (declare BCs first, compute once)
+##### 4.8.2.4 Lane C — Boundary & ledger corridor (declare BCs first, compute once)
 -------------------------------------------------------------------------
 
 **Why the order matters.** Variation produces surface terms; unless BCs are fixed in advance and compensators are inserted, the Euler–Lagrange process is not a function and algebra will quietly leak to the boundary.
 
-### 8.4.1 Variational surface terms → BC menus, rigorously
+##### 4.8.2.4.1 Variational surface terms → BC menus, rigorously
 
-*   **Spin-1 (including axial).**  $\delta S$  carries  $ \int_{\partial\Omega} n_\nu H^{\nu\mu}\,\delta S_\mu$ .  
+*   **Spin-1 (including axial).**  $`\delta S`$  carries  $`\int_{\partial\Omega} n_\nu H^{\nu\mu}\,\delta S_\mu`$ .  
     Choices: **Dirichlet** (fix tangential  $S$ ), **Neumann** (fix  $n_\nu H^{\nu\mu}$ ), **Robin** (linear combo), **Sommerfeld** (radiation). A compensator on  $\partial\Omega$  makes  $\delta S$  clean.
 *   **Yang–Mills.** Fix the appropriate tangential potential or the normal flux; add the matching surface piece. Sommerfeld for outgoing waves.
 *   **Scalar.** Fix  $\phi$  or  $n\!\cdot\!\partial\phi$ ; the complementary choice is the compensator.
 
 **Function spaces.** Use  $H(\mathrm{curl})$  and  $H(\mathrm{div})$  for vector traces; the trace theorems ensure  $(n\times S)$  and  $(n\!\cdot\!H)$  are well-defined boundary data, so the above BCs are not folklore—they are functional identities.
 
-### 8.4.2 Reciprocity & uniqueness: Green–Betti + Rellich = only one answer
+##### 4.8.2.4.2 Reciprocity & uniqueness: Green–Betti + Rellich = only one answer
 
 *   **Green–Betti.** For second-order systems,  $\int_\Omega (u\,\mathcal L v - v\,\mathcal L u)=\int_{\partial\Omega}(u\,\mathcal B v - v\,\mathcal B u)$ . This equates (i) free-space+homogeneous completion, (ii) images, (iii) boundary integrals—**under the same BCs**.
 *   **Rellich uniqueness.** With Sommerfeld radiation, a radiating solution that carries no flux at infinity is zero. Hence no hidden homogeneous piece contaminates the solution.
 
-### 8.4.3 Posting rules (what moves to the ledger)
+##### 4.8.2.4.3 Posting rules (what moves to the ledger)
 
 *   **IBP/improvements:** total divergences and superpotentials move **only** surface posts.
 *   **Topological integers:** Pontryagin/CS (with  $\mathcal A=gA$  so the level is integer) and Nieh–Yan/Holst are integers recorded at the edge; they never replace kinetic terms.
 
 * * *
 
-##### 4.8.2.8.5 Lane D — Dispersion & positivity corridor (retarded, DC, Herglotz)
+##### 4.8.2.5 Lane D — Dispersion & positivity corridor (retarded, DC, Herglotz)
 ----------------------------------------------------------------------
 
 **Why we enforce this.** Causality + passivity implies analytic structure + positivity. Read DC improperly, and you will manufacture negative slopes and violate physics.
 
-### 8.5.1 Retarded convention and spectral measure
+##### 4.8.2.5.1 Retarded convention and spectral measure
 
 Use  $\omega\to\omega+i0^+$  for all Green functions. For scalar channels,
 
@@ -1986,7 +1986,7 @@ $$
 
 with  $\rho(\mu)\ge 0$  (spectral measure). This is the Herglotz representation; it encodes positivity before any numerics.
 
-### 8.5.2 DC order:  $\mathbf k\to0$  then  $\omega\to0^+$ 
+##### 4.8.2.5.2 DC order:  $\mathbf k\to0$  then  $\omega\to0^+$ 
 
 The slope
 
@@ -1996,7 +1996,7 @@ $$
 
 is the passivity test. Interchange of limits can spoil it; we forbid that.
 
-### 8.5.3 Kramers–Kronig with subtractions; moments/sum-rules
+##### 4.8.2.5.3 Kramers–Kronig with subtractions; moments/sum-rules
 
 Principal-value integrals with enough subtractions render K–K finite. Moments
 
@@ -2008,7 +2008,7 @@ give quick internal consistency checks: incorrect signs or wrong DC order light 
 
 * * *
 
-##### 4.8.2.8.6 Micro-workflows you can copy-paste (now with error bars and asymptotics)
+##### 4.8.2.6 Micro-workflows you can copy-paste (now with error bars and asymptotics)
 ----------------------------------------------------------------------------
 
 ### Card A — Static axial field from a compact polarized source
@@ -2042,7 +2042,7 @@ give quick internal consistency checks: incorrect signs or wrong DC order light 
 
 * * *
 
-##### 4.8.2.8.7 Lemmas and proofs you’ll actually cite
+##### 4.8.2.7 Lemmas and proofs you’ll actually cite
 ------------------------------------------
 
 ### (L1) Projector–inverse commutation (vector case), with boundary remainder
@@ -2072,7 +2072,7 @@ With  $K=R^\dagger R$ , the map  $X\mapsto RX$  preserves principal symbols, pol
 
 * * *
 
-##### 4.8.2.8.8 Discrete posture (how to do all this on a computer without breaking physics)
+##### 4.8.2.8 Discrete posture (how to do all this on a computer without breaking physics)
 --------------------------------------------------------------------------------
 
 **Transforms.** Use the **Miller Transform** locks: MT-c (continuous), MT-d (unitary DFT), MT-1S (single-frequency estimator consistent with MT-d on-grid).
@@ -2089,7 +2089,7 @@ With  $K=R^\dagger R$ , the map  $X\mapsto RX$  preserves principal symbols, pol
 
 * * *
 
-##### 4.8.2.8.9 Pitfalls (and why MEFP keeps you out of them)
+##### 4.8.2.9 Pitfalls (and why MEFP keeps you out of them)
 -------------------------------------------------
 
 *   **Undeclared BCs.** IBP leaks to the boundary; variations cease to be functionals. Remedy: declare BCs _first_, add compensators, and post every surface term.
@@ -2100,7 +2100,7 @@ With  $K=R^\dagger R$ , the map  $X\mapsto RX$  preserves principal symbols, pol
 
 * * *
 
-##### 4.8.2.8.10 What MEFP + MPSD buys you in practice
+##### 4.8.2.10 What MEFP + MPSD buys you in practice
 ------------------------------------------
 
 *   **Speed with proof.** Every inversion reduces to **one scalar resolvent per channel**; residues and cones are visible; signs are audited.
@@ -2341,7 +2341,7 @@ This guarantees passivity survives the legal “integrate-out” we use in effec
 
 **Purpose.** Beyond kernels: how do _fronts_ (singularities) move on curved backgrounds?
 
-**Propagation of singularities.** For normally hyperbolic operators, the wavefront set  $\operatorname{WF}(G^R)$  lies on the **bicharacteristic flow** generated by the Hamiltonian  $H(x,k)=\tfrac12 g^{\mu\nu}k_\mu k_\nu$ . This says: singular support rides null geodesics. The Hadamard form  $U\delta(\sigma)+V\theta(-\sigma)$  is the local expression of that transport;  $U$  obeys a transport equation along null geodesics,  $V$  solves an inhomogeneous recursion. We use this only to justify local causal support and to patch parametrices—no quantum inputs are needed.
+**Propagation of singularities.** For normally hyperbolic operators, the wavefront set  $\mathrm{WF}(G^R)$  lies on the **bicharacteristic flow** generated by the Hamiltonian  $H(x,k)=\tfrac12 g^{\mu\nu}k_\mu k_\nu$ . This says: singular support rides null geodesics. The Hadamard form  $U\delta(\sigma)+V\theta(-\sigma)$  is the local expression of that transport;  $U$  obeys a transport equation along null geodesics,  $V$  solves an inhomogeneous recursion. We use this only to justify local causal support and to patch parametrices—no quantum inputs are needed.
 
 * * *
 
@@ -2363,9 +2363,9 @@ This guarantees passivity survives the legal “integrate-out” we use in effec
 
 ### Lemma 9.1 (Luminal front for spin-1 transverse block)
 
-For  $P^\mu{}_\nu=\nabla_\alpha\nabla^\alpha\delta^\mu{}_\nu-\nabla^\mu\nabla_\nu$ ,  
- $\sigma(P)^\mu{}_\nu(x,k)=-k^2\delta^\mu{}_\nu + k^\mu k_\nu$ .  
-Eigenvalues vanish iff  $k^2=0$ . Hence the characteristic cone is the light cone, and the front is luminal. □
+For  $`P^\mu{}_\nu=\nabla_\alpha\nabla^\alpha\delta^\mu{}_\nu-\nabla^\mu\nabla_\nu`$ ,  
+ $`\sigma(P)^\mu{}_\nu(x,k)=-k^2\delta^\mu{}_\nu + k^\mu k_\nu`$ .  
+Eigenvalues vanish iff  $`k^2=0`$ . Hence the characteristic cone is the light cone, and the front is luminal.
 
 ### Lemma 9.2 (Energy estimate ⇒ well-posedness)
 
@@ -2474,9 +2474,9 @@ The boundary menus we use are not slogans; they are theorems about traces.
 
 *   **Scalars.**  $\phi\in H^1(\Omega)$  admits the trace  $\gamma\phi=\phi|_{\partial\Omega}\in H^{1/2}(\partial\Omega)$  and a normal-derivative trace in  $H^{-1/2}(\partial\Omega)$  once the PDE is imposed. Dirichlet, Neumann, and Robin BCs are thus well-defined as constraints on  $H^{1/2}$  and  $H^{-1/2}$  data.
 *   **One-forms (vectors).** The right spaces are  $H(\mathrm{curl};\Omega)=\{V\in L^2: \nabla\times V\in L^2\}$  and  $H(\mathrm{div};\Omega)=\{V\in L^2: \nabla\!\cdot V\in L^2\}$ . Tangential and normal traces,
-    $$
+    $`
     \gamma_t V=(n\times V)|_{\partial\Omega}\in H^{-1/2}(\mathrm{div}_{\partial\Omega}),\quad \gamma_n V=(n\!\cdot V)|_{\partial\Omega}\in H^{-1/2}(\partial\Omega),
-    $$
+    `$
     are continuous maps. This is what makes “fix tangential field” or “fix normal flux” _mathematical statements_ rather than wishes.
 *   **Tensors.** For YM or symmetric tensors in divergence form, the boundary operator appearing in Green–Betti identities is of the tangential/normal-flux type; we treat it via surface differential forms and the induced metric  $h$ .
 
@@ -2634,13 +2634,13 @@ The _gravitational_ boundary energy is **not** in this flux; it is the ADM/Brown
 ### 10.7.1 Integer classes with explicit coupling normalization
 
 *   **Pontryagin (gauge):**
-    $$
+    $`
     \nu_G=\frac{1}{8\pi^2}\int_{\mathcal M}\mathrm{Tr}(F\wedge F)\in \mathbb Z.
-    $$
+    `$
 *   **Chern–Simons on a 3-manifold.** Write  $\mathcal A\equiv g A$ . Then
-    $$
+    $`
     S_{CS}=\frac{k}{4\pi g^2}\int_{\partial\mathcal M}\!\mathrm{Tr}\Big(\mathcal A\wedge d\mathcal A+\tfrac{2}{3}\mathcal A\wedge\mathcal A\wedge\mathcal A\Big),\quad k\in\mathbb Z,
-    $$
+    `$
     so the **level  $k$ ** remains manifestly integer regardless of the coupling convention.
 *   **Nieh–Yan/Holst (torsion/gravity).** Built from torsion and curvature; integer-valued on closed manifolds; in our policy they are **ledger-only** (do not replace bulk kinetics).
 
@@ -2811,10 +2811,10 @@ $$
 **Immediate payoffs.**
 
 *   **Plancherel/Parseval (exact):**  
-     $\displaystyle \int |f|^2=\int |\tilde f|^2$  (time) and  $\displaystyle \int |f|^2=\int |\tilde f|^2$  (space–time), with no stray factors.
+     $`\displaystyle \int |f|^2=\int |\tilde f|^2`$  (time) and  $`\displaystyle \int |f|^2=\int |\tilde f|^2`$  (space–time), with no stray factors.
 *   **Derivative dictionary:**  
-     $\partial_t \leftrightarrow i\omega,\ \nabla \leftrightarrow -i\mathbf k,\ \Box \leftrightarrow (-\omega^2+\mathbf k^2)$ .
-*   **Convolution/product:** a convolution in  $t$  (or in  $x$ ) becomes pointwise multiplication, times the same MT-c scale, so you never juggle inconsistent  $2\pi$  factors.
+     $`\partial_t \leftrightarrow i\omega,\ \nabla \leftrightarrow -i\mathbf k,\ \Box \leftrightarrow (-\omega^2+\mathbf k^2)`$ .
+*   **Convolution/product:** a convolution in  $t$  (or in  $x$ ) becomes pointwise multiplication, times the same MT-c scale, so you never juggle inconsistent  $`2\pi`$  factors.
 
 **Retarded prescription = analyticity.**  
 Causality (support only for  $t\ge 0$ ) is the statement “ $\tilde f$  extends analytically to  $\Im\omega>0$  and is the boundary value from above.” We encode this by **always** reading
