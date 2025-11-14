@@ -1,0 +1,7 @@
+UGFT Consolidation — Merge Metrics
+Timestamp (UTC): 20251114T172137Z
+
+[equations] sources=29, entries_seen=4008, new=1701, deduped=2307, superseded=0, collisions=0
+[item-names] sources=7, entries_seen=4942, new=1317, deduped=3625, superseded=0, collisions=0
+[knowledge] sources=30, entries_seen=5347, new=3982, deduped=1365, superseded=0, collisions=0
+[structures] sources=29, entries_seen=550, new=259, deduped=291, superseded=0, collisions=0
