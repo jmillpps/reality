@@ -39,7 +39,7 @@ Somewhere in this superposition there has to be a primorial equation—the one s
 I don’t find it in the UGFT chapters. I find it in the **knowledge index**, disguised as an item with an ID instead of a name:
 
 > **KN-be8ffafc4c**
-> $$\boxed{\Pi = \underbrace{\Pi_{\text{period}}}_{\text{jar}} + \underbrace{\Pi_{\text{rim}}}_{\text{ledger}}}$$
+> $$\boxed{\Pi = \underbrace{\Pi_{\mathrm{period}}}_{\text{jar}} + \underbrace{\Pi_{\mathrm{rim}}}_{\text{ledger}}}$$
 
 There it is. The primorial equation I wasn’t ready to call out when I first wrote it.
 
