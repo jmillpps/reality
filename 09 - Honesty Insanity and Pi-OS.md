@@ -39,7 +39,10 @@ Somewhere in this superposition there has to be a primorial equation—the one s
 I don’t find it in the UGFT chapters. I find it in the **knowledge index**, disguised as an item with an ID instead of a name:
 
 > **KN-be8ffafc4c**
-> $$\boxed{\Pi = \underbrace{\Pi_{\mathrm{period}}}_{\text{jar}} + \underbrace{\Pi_{\mathrm{rim}}}_{\text{ledger}}}$$
+
+$$
+\boxed{\Pi = \underbrace{\Pi_{\mathrm{period}}}_{\text{jar}} + \underbrace{\Pi_{\mathrm{rim}}}_{\text{ledger}}}
+$$
 
 There it is. The primorial equation I wasn’t ready to call out when I first wrote it.
 
@@ -437,7 +440,7 @@ The jar, the rim, and the coin that refuses to move
 
 The Miller Equivalence Theorem is sitting in Chapter 4 like it owns the place. It says, in its calm, boxed way, that the total energy on a Cauchy slice is the sum of two things: the jar energy, the integral of $T^0{}_0$ over the slice with the right lapse and metric, plus a gravitational rim coin, the ADM surface energy on the boundary; all together equal to $c^2$ times the ADM mass.
 
-The notes below it are boring in the best possible way. They remind me that $T^0{}*0$ is the sum of every bulk sector we’ve already fixed—Yang–Mills, scalars, Dirac, axial torsion $S*\mu$—with our sign conventions. They remind me that the rim coin is the surface term you get from the ADM/Regge–Teitelboim generator once GHY is in the action. They insist that any total divergence or EOM-proportional “improvement” modifies only the boundary ledger line, leaving the boxed equality untouched.
+The notes below it are boring in the best possible way. They remind me that $T^0{}_0$ is the sum of every bulk sector we’ve already fixed—Yang–Mills, scalars, Dirac, axial torsion $S_\mu$—with our sign conventions. They remind me that the rim coin is the surface term you get from the ADM/Regge–Teitelboim generator once GHY is in the action. They insist that any total divergence or EOM-proportional “improvement” modifies only the boundary ledger line, leaving the boxed equality untouched.
 
 Translated into my language: you can shuffle terms, integrate by parts, change basis, clean up the Lagrangian, but you don’t get to move the coin.
 
