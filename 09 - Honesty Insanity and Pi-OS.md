@@ -623,7 +623,7 @@ Of course it’s first on the “what else” punch list. Propagation and disper
 
 The notes underneath are precise in a way that makes my chest tight:
 
-Front/group/signal split: front rides the characteristic cone $\det\sigma(L)=0$; for spin-1 transverse blocks this pins the front to luminal, $k^2 = 0$. Group speed subluminal via the actual dispersion $\omega(k)$. Retarded kernels: support on or inside the light-cone, with a $\delta(t-r)/(4\pi r)$ front and a Bessel tail body for massive modes. Passivity at DC: for each channel, $\lim_{\omega\downarrow0} \operatorname{Im}\chi^R(\omega,0)/\omega \ge 0$. This is your non-negativity of “low-frequency slope.” The DC corridor: always take $|k|\to0$ then $\omega\to0^+$; reversing erases spectral weight or fakes activity. Keep a tiny $m\to0^+$ regulator and remove it after the corridor. Schur complement for mixed channels; re-check positivity on the reduced block.
+Front/group/signal split: front rides the characteristic cone $\det\sigma(L)=0$; for spin-1 transverse blocks this pins the front to luminal, $k^2 = 0$. Group speed subluminal via the actual dispersion $\omega(k)$. Retarded kernels: support on or inside the light-cone, with a $\delta(t-r)/(4\pi r)$ front and a Bessel tail body for massive modes. Passivity at DC: for each channel, $\lim_{\omega\downarrow0} \mathrm{Im}\,\chi^R(\omega,0)/\omega \ge 0$. This is your non-negativity of “low-frequency slope.” The DC corridor: always take $|k|\to0$ then $\omega\to0^+$; reversing erases spectral weight or fakes activity. Keep a tiny $m\to0^+$ regulator and remove it after the corridor. Schur complement for mixed channels; re-check positivity on the reduced block.
 
 It reads like a clinical checklist.
 To me, it reads like a cardiology report.
@@ -654,7 +654,7 @@ Because for weeks, that’s exactly how my perception has felt: first a subtle r
 
 And passivity? That’s the part where energy is only supposed to flow one way in response: the system shouldn’t be able to extract more power from a drive than what you put in. In my head, that’s the difference between “I’m using this stack to learn” and “this stack is chewing through my life.”
 
-The formal Herglotz condition is simple enough: for each physical response channel, $\lim_{\omega\to0^+} \operatorname{Im}\chi^R(\omega,0)/\omega \ge 0$. No negative low-frequency slopes. No perpetuum mobile at DC.
+The formal Herglotz condition is simple enough: for each physical response channel, $\lim_{\omega\to0^+} \mathrm{Im}\,\chi^R(\omega,0)/\omega \ge 0$. No negative low-frequency slopes. No perpetuum mobile at DC.
 
 In the Proof-of-the-Pudding chapter, they say it even more sharply: Herglotz/K–K must hold after the map; if not, the ruler is still wrong. And they tie it straight into MT: choosing the wrong Fourier sign or normalization will literally flip the sign of that slope and make a passive system look active.
 
@@ -670,7 +670,7 @@ The corridor rule comes next, and it lands like a hammer:
 Always take $|k|\to0$ first, then $\omega\to0^+$.
 Reversing erases spectral weight or fakes “activity.” Keep a tiny $m\to0^+$ regulator for massless channels and remove it after the corridor.
 
-In the Pudding, there’s even a lemma about it: swap the order of limits and you literally get a different answer for $\lim \operatorname{Im}\chi/\omega$. Wrong order gives you the wrong sign. They don’t sugarcoat it: reversing the corridor is how you lie to yourself about passivity.
+In the Pudding, there’s even a lemma about it: swap the order of limits and you literally get a different answer for $\lim \mathrm{Im}\,\chi/\omega$. Wrong order gives you the wrong sign. They don’t sugarcoat it: reversing the corridor is how you lie to yourself about passivity.
 
 I realize, with a sick little twist, that this corridor problem is exactly how my days have been structured: I’ve been taking “$\omega\to0$” first—staring at the smallest time increments, the hyperfocus, the late-night details—without ever letting the spatial picture settle. Only later do I take $|k|\to0$, trying to zoom out after the fact.
 
@@ -1662,7 +1662,7 @@ I grab the spectral ruler and do the pocket‑pat check: keys, phone, wallet; Pa
 Quick red flag: if the Yukawa constant comes back as anything but $e^{-mr}/(4\pi r)$, I broke the ruler and all the pretty spectra are cosplay. If Parseval isn’t exact, I’m measuring with a rubber tape. If I mixed time‑ordered with retarded, I’m listening to the past argue with the present. 
 
 Lever 3 — The corridor and the slope (MDPC)
-Then I look at the system’s pulse: causality and passivity. The MDPC card says fronts ride the characteristic cone; groups are subluminal; kernels are retarded with $\delta(t-r)/(4\pi r)$ at the front and a Bessel body for massive modes; and at DC we always take $|k|\to0$ first, then $\omega\to0^+$, with the Herglotz condition $\operatorname{Im}\chi^R(\omega,0)/\omega \ge 0$ as $\omega\to0^+$. That isn’t poetry; it’s our corridor order and slope sign, written down in plain equations.
+Then I look at the system’s pulse: causality and passivity. The MDPC card says fronts ride the characteristic cone; groups are subluminal; kernels are retarded with $\delta(t-r)/(4\pi r)$ at the front and a Bessel body for massive modes; and at DC we always take $|k|\to0$ first, then $\omega\to0^+$, with the Herglotz condition $\mathrm{Im}\,\chi^R(\omega,0)/\omega \ge 0$ as $\omega\to0^+$. That isn’t poetry; it’s our corridor order and slope sign, written down in plain equations.
 Quick red flag: if swapping the order of limits flips a sign or makes a passive channel look active, I’m faking health with math. If any kernel has support for $t<0$, I’m hallucinating precognition.
 
 If those three levers don’t snap off in my hand, I keep going. Now I check the two things most likely to trick me when I’m tired: π and pictures.
